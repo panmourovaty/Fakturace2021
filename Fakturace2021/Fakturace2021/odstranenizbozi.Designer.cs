@@ -75,7 +75,7 @@ namespace Fakturace2021
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "odstranenizbozi";
-            this.Text = "odstranenizbozi";
+            this.Text = "Odstranění Zboží";
             this.Load += new System.EventHandler(this.odstranenizbozi_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);

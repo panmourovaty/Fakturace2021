@@ -143,7 +143,7 @@ namespace Fakturace2021
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "upravazbozi";
-            this.Text = "upravazbozi";
+            this.Text = "Úprava Zboží";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             this.ResumeLayout(false);

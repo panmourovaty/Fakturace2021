@@ -103,5 +103,15 @@ namespace Fakturace2021
             odstranenizbozi odstranenizbozi = new odstranenizbozi();
             odstranenizbozi.Show();
         }
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            vyhledavanizbozi vyhledavanizbozi = new vyhledavanizbozi();
+            vyhledavanizbozi.Show();
+        }
     }
 }
