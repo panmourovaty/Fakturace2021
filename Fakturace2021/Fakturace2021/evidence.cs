@@ -20,8 +20,7 @@ namespace Fakturace2021
 
         private void evidence_Load(object sender, EventArgs e)
         {
-            string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Administrator\Documents\GitHub\Fakturace2021\Fakturace2021\Fakturace2021\Databasefakturace.mdf;Integrated Security=True";
-            using (SqlConnection pripojeni = new SqlConnection(connectionString))
+            using (SqlConnection pripojeni = new SqlConnection(pripojenikdatabazi.connectionString))
             {
                 pripojeni.Open();
 
@@ -36,6 +35,76 @@ namespace Fakturace2021
                 dataGridView2.DataSource = tabulkazbozi;
             }
 
+            comboBox1.Text = "Vše";
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string polozka = comboBox1.Text;
+            if (polozka.Contains("Firma"))
+            {
+                using (SqlConnection pripojeni = new SqlConnection(pripojenikdatabazi.connectionString))
+                {
+                    pripojeni.Open();
+
+                    SqlDataAdapter SqlData = new SqlDataAdapter("SELECT * FROM dbo.zakaznici WHERE typ='firma'", pripojeni);
+                    DataTable tabulkazakaznici = new DataTable();
+                    SqlData.Fill(tabulkazakaznici);
+                    dataGridView1.DataSource = tabulkazakaznici;
+                }
+            }
+            else if (polozka.Contains("Živnostník"))
+            {
+                using (SqlConnection pripojeni = new SqlConnection(pripojenikdatabazi.connectionString))
+                {
+                    pripojeni.Open();
+
+                    SqlDataAdapter SqlData = new SqlDataAdapter("SELECT * FROM dbo.zakaznici WHERE typ='živnostník'", pripojeni);
+                    DataTable tabulkazakaznici = new DataTable();
+                    SqlData.Fill(tabulkazakaznici);
+                    dataGridView1.DataSource = tabulkazakaznici;
+                }
+            }
+            else
+            {
+                using (SqlConnection pripojeni = new SqlConnection(pripojenikdatabazi.connectionString))
+                {
+                    pripojeni.Open();
+
+                    SqlDataAdapter SqlData = new SqlDataAdapter("SELECT * FROM dbo.zakaznici", pripojeni);
+                    DataTable tabulkazakaznici = new DataTable();
+                    SqlData.Fill(tabulkazakaznici);
+                    dataGridView1.DataSource = tabulkazakaznici;
+                }
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            using (SqlConnection pripojeni = new SqlConnection(pripojenikdatabazi.connectionString))
+            {
+                pripojeni.Open();
+
+                SqlDataAdapter SqlData2 = new SqlDataAdapter("SELECT * FROM dbo.zbozi WHERE jenasklade='True'", pripojeni);
+                DataTable tabulkazbozi = new DataTable();
+                SqlData2.Fill(tabulkazbozi);
+                dataGridView2.DataSource = tabulkazbozi;
+            }
+            
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            using (SqlConnection pripojeni = new SqlConnection(pripojenikdatabazi.connectionString))
+            {
+                pripojeni.Open();
+
+                SqlDataAdapter SqlData2 = new SqlDataAdapter("SELECT * FROM dbo.zbozi", pripojeni);
+                DataTable tabulkazbozi = new DataTable();
+                SqlData2.Fill(tabulkazbozi);
+                dataGridView2.DataSource = tabulkazbozi;
+            }
         }
     }
 }

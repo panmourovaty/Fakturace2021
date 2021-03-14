@@ -13,8 +13,7 @@ namespace Fakturace2021
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Administrator\Documents\GitHub\Fakturace2021\Fakturace2021\Fakturace2021\Databasefakturace.mdf;Integrated Security=True";
-            using (SqlConnection pripojeni = new SqlConnection(connectionString))
+            using (SqlConnection pripojeni = new SqlConnection(pripojenikdatabazi.connectionString))
             {
                 pripojeni.Open();
                 string nazev = textBox1.Text;

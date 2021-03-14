@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace Fakturace2021
 {
-    public partial class hlavniform : Form
+public partial class hlavniform : Form
     {
         public hlavniform()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+    private void button1_Click(object sender, EventArgs e)
         {
             evidencezakazniku evidencezakazniku = new evidencezakazniku();
             evidencezakazniku.Show();
