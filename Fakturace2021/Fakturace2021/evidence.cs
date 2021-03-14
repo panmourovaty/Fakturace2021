@@ -82,29 +82,20 @@ namespace Fakturace2021
 
         private void button1_Click(object sender, EventArgs e)
         {
-            using (SqlConnection pripojeni = new SqlConnection(pripojenikdatabazi.connectionString))
-            {
-                pripojeni.Open();
+            upravazbozi upravazbozi = new upravazbozi();
+            upravazbozi.Show();
+        }
 
-                SqlDataAdapter SqlData2 = new SqlDataAdapter("SELECT * FROM dbo.zbozi WHERE jenasklade='True'", pripojeni);
-                DataTable tabulkazbozi = new DataTable();
-                SqlData2.Fill(tabulkazbozi);
-                dataGridView2.DataSource = tabulkazbozi;
-            }
-            
+        private void dataGridView2_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            using (SqlConnection pripojeni = new SqlConnection(pripojenikdatabazi.connectionString))
-            {
-                pripojeni.Open();
-
-                SqlDataAdapter SqlData2 = new SqlDataAdapter("SELECT * FROM dbo.zbozi", pripojeni);
-                DataTable tabulkazbozi = new DataTable();
-                SqlData2.Fill(tabulkazbozi);
-                dataGridView2.DataSource = tabulkazbozi;
-            }
+            evidence evidence = new evidence();
+            evidence.Show();
+            this.Close();
         }
     }
 }

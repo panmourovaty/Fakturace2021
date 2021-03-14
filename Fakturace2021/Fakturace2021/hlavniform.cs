@@ -34,5 +34,14 @@ public partial class hlavniform : Form
             evidence evidence = new evidence();
             evidence.Show();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Před použitím tohoto programu si přečtěte EULA" + Environment.NewLine + "https://github.com/panmourovaty/Fakturace2021", "EULA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            if (result == DialogResult.OK)
+            {
+                this.Close();
+            }
+        }
     }
 }

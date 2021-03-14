@@ -48,8 +48,7 @@ namespace Fakturace2021
                     sqlDotaz.Parameters.AddWithValue("@ICO", ICO);
                     sqlDotaz.Parameters.AddWithValue("@email", email);
                     sqlDotaz.Parameters.AddWithValue("@telcislo", telcislo);
-                    int radku = sqlDotaz.ExecuteNonQuery();
-                    Console.WriteLine(radku);
+                    sqlDotaz.ExecuteNonQuery();
                 }
             }
             this.Close();

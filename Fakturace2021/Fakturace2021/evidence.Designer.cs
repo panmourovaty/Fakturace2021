@@ -172,7 +172,7 @@ namespace Fakturace2021
             this.nazev,
             this.cena,
             this.jenasklade});
-            this.dataGridView2.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dataGridView2.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnKeystroke;
             this.dataGridView2.Location = new System.Drawing.Point(711, 45);
             this.dataGridView2.MultiSelect = false;
             this.dataGridView2.Name = "dataGridView2";
@@ -180,6 +180,7 @@ namespace Fakturace2021
             this.dataGridView2.RowTemplate.Height = 25;
             this.dataGridView2.Size = new System.Drawing.Size(550, 672);
             this.dataGridView2.TabIndex = 1;
+            this.dataGridView2.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellEndEdit);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -187,7 +188,6 @@ namespace Fakturace2021
             this.dataGridViewTextBoxColumn1.HeaderText = "ID";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Visible = false;
             // 
             // nazev
             // 
@@ -199,7 +199,7 @@ namespace Fakturace2021
             // cena
             // 
             this.cena.DataPropertyName = "cena";
-            this.cena.HeaderText = "Cena";
+            this.cena.HeaderText = "Cena (v KČ)";
             this.cena.Name = "cena";
             this.cena.ReadOnly = true;
             // 
@@ -246,7 +246,7 @@ namespace Fakturace2021
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(1060, 46);
+            this.button1.Location = new System.Drawing.Point(1157, 46);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(25, 23);
             this.button1.TabIndex = 5;
@@ -256,11 +256,11 @@ namespace Fakturace2021
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(1091, 46);
+            this.button2.Location = new System.Drawing.Point(1197, 12);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(25, 23);
+            this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 6;
-            this.button2.Text = "🔎";
+            this.button2.Text = "obnovit";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -281,6 +281,7 @@ namespace Fakturace2021
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "evidence";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Evidence";
             this.Load += new System.EventHandler(this.evidence_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -301,14 +302,14 @@ namespace Fakturace2021
         private System.Windows.Forms.DataGridViewTextBoxColumn adresa;
         private System.Windows.Forms.DataGridViewTextBoxColumn email;
         private System.Windows.Forms.DataGridViewTextBoxColumn telcislo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nazev;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cena;
-        private System.Windows.Forms.DataGridViewTextBoxColumn jenasklade;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nazev;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cena;
+        private System.Windows.Forms.DataGridViewTextBoxColumn jenasklade;
         private System.Windows.Forms.Button button2;
     }
 }
