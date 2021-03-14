@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Fakturace2021
 {
-    public partial class Form1 : Form
+    public partial class hlavniform : Form
     {
-        public Form1()
+        public hlavniform()
         {
             InitializeComponent();
         }
@@ -21,6 +21,12 @@ namespace Fakturace2021
         {
             evidencezakazniku evidencezakazniku = new evidencezakazniku();
             evidencezakazniku.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            evidencezbozi evidencezbozi = new evidencezbozi();
+            evidencezbozi.Show();
         }
     }
 }

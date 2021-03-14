@@ -1,7 +1,7 @@
 ﻿
 namespace Fakturace2021
 {
-    partial class Form1
+    partial class hlavniform
     {
         /// <summary>
         ///  Required designer variable.
@@ -52,6 +52,7 @@ namespace Fakturace2021
             this.button2.TabIndex = 1;
             this.button2.Text = "Evidence Zboží";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -62,7 +63,7 @@ namespace Fakturace2021
             this.button3.Text = "Evidence";
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // Form1
+            // hlavniform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -70,7 +71,7 @@ namespace Fakturace2021
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Name = "Form1";
+            this.Name = "hlavniform";
             this.Text = "Fakturace";
             this.ResumeLayout(false);
 

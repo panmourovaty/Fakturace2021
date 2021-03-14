@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Fakturace2021
 {
@@ -34,6 +28,31 @@ namespace Fakturace2021
 
         private void button1_Click(object sender, EventArgs e)
         {
+            string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Administrator\Documents\GitHub\Fakturace2021\Fakturace2021\Fakturace2021\Databasefakturace.mdf;Integrated Security=True";
+            using (SqlConnection pripojeni = new SqlConnection(connectionString))
+            {
+                pripojeni.Open();
+
+                string jmenoprijmeni = textBox1.Text;
+                string typ = (string)comboBox1.Text;
+                string adresa = textBox2.Text;
+                string ICO = numericUpDown1.Value.ToString();
+                string email = textBox3.Text;
+                string telcislo = textBox4.Text;
+
+                string dotaz = "INSERT INTO dbo.zakaznici (jmenoprijmeni, typ, adresa, ICO, email, telcislo) VALUES (@jmenoprijmeni, @typ, @adresa, @ICO, @email, @telcislo)";
+                using (SqlCommand sqlDotaz = new SqlCommand(dotaz, pripojeni))
+                {
+                    sqlDotaz.Parameters.AddWithValue("@jmenoprijmeni", jmenoprijmeni);
+                    sqlDotaz.Parameters.AddWithValue("@typ", typ);
+                    sqlDotaz.Parameters.AddWithValue("@adresa", adresa);
+                    sqlDotaz.Parameters.AddWithValue("@ICO", ICO);
+                    sqlDotaz.Parameters.AddWithValue("@email", email);
+                    sqlDotaz.Parameters.AddWithValue("@telcislo", telcislo);
+                    int radku = sqlDotaz.ExecuteNonQuery();
+                    Console.WriteLine(radku);
+                }
+            }
             this.Close();
         }
     }
