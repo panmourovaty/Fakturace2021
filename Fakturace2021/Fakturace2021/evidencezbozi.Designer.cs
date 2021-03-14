@@ -104,6 +104,7 @@ namespace Fakturace2021
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(316, 186);
             this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.button1);
@@ -112,6 +113,9 @@ namespace Fakturace2021
             this.Controls.Add(this.label1);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.textBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "evidencezbozi";
             this.Text = "Evidence zboží";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();

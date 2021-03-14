@@ -28,5 +28,11 @@ namespace Fakturace2021
             evidencezbozi evidencezbozi = new evidencezbozi();
             evidencezbozi.Show();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            evidence evidence = new evidence();
+            evidence.Show();
+        }
     }
 }
