@@ -1,5 +1,6 @@
 # 📜 Fakturace 2021 📜
 
+Dominik Hejl
 
 ![Screenshot](https://github.com/panmourovaty/Fakturace2021/blob/main/printsceen.PNG)
 
@@ -17,7 +18,9 @@ Tento projekt byl testován na Windows Server 2019 s architekturou x86_64 ale pr
 
 ## 🪲 Problémy co jsem měl 🪲
 
-Dominik Hejl, Windows selhal a musel jsem ho reinstallovat
+- Windows selhal a musel jsem ho reinstallovat
+- Problémy s MSSQL
+- Problémy s Visual Studiem
 
 ## 🤮 EULA 🤮
 1. tento projekt a jeho zdrojový kód mužete používat jak chcete bez jakéhokoli omezení mimo toho uvedeného v bodě 2
