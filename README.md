@@ -1,5 +1,9 @@
 # Fakturace2021
 
+
+![Screenshot](https://github.com/panmourovaty/Fakturace2021/blob/main/printsceen.PNG)
+
+
 Base repository for school test ...
 
 Dominik Hejl, Windows selhal a musel jsem ho reinstallovat
