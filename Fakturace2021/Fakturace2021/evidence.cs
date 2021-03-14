@@ -97,5 +97,11 @@ namespace Fakturace2021
             evidence.Show();
             this.Close();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            odstranenizbozi odstranenizbozi = new odstranenizbozi();
+            odstranenizbozi.Show();
+        }
     }
 }
