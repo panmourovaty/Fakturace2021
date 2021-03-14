@@ -6,7 +6,7 @@
 ## ⚠️ Tento Projekt je pouze školní test ⚠️
 
 ## Návod k použití
-Nejjednoduší způsob jak tento projekt vyzkoušet je stáhnout a spustit ![vydání](https://github.com/panmourovaty/Fakturace2021/releases/) nebo případně pro potřeby kontrolování kódu ![stáhnou projekt](https://github.com/panmourovaty/Fakturace2021/archive/main.zip), přepsat connectionstring v souboru pripojenikdatabazi.cs tak aby směřovala na soubor Databasefakturace.mdf který je součástí ![vydání](https://github.com/panmourovaty/Fakturace2021/releases/) a následně zkompilovat.
+Nejjednoduší způsob jak tento projekt vyzkoušet je stáhnout a spustit [vydání](https://github.com/panmourovaty/Fakturace2021/releases/) nebo případně pro potřeby kontrolování kódu [stáhnou projekt](https://github.com/panmourovaty/Fakturace2021/archive/main.zip), přepsat connectionstring v souboru pripojenikdatabazi.cs tak aby směřovala na soubor Databasefakturace.mdf který je součástí [vydání](https://github.com/panmourovaty/Fakturace2021/releases/) a následně zkompilovat.
 
 ## Požadavky pro běh
 .NET 5.0
