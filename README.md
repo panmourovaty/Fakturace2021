@@ -10,9 +10,9 @@ Dominik Hejl
 Nejjednoduší způsob jak tento projekt vyzkoušet je stáhnout a spustit [vydání](https://github.com/panmourovaty/Fakturace2021/releases/) nebo případně pro potřeby kontrolování kódu [stáhnou projekt](https://github.com/panmourovaty/Fakturace2021/archive/main.zip), přepsat connectionstring v souboru pripojenikdatabazi.cs tak aby směřovala na soubor Databasefakturace.mdf který je součástí [vydání](https://github.com/panmourovaty/Fakturace2021/releases/) a následně zkompilovat.
 
 ## 🖥️ Požadavky pro běh 🖥️
-.NET 5.0
-Windows Server 2019
-x86_64
+- .NET 5.0
+- Windows Server 2019
+- x86_64
 
 Tento projekt byl testován na Windows Server 2019 s architekturou x86_64 ale pravděpodobně bude fungovat na všech OS a architekturách na kterých je možné spustit .NET 5.0
 
